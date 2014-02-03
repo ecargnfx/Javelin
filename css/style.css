@@ -130,7 +130,7 @@ img.logo {
 
 .title-block {
   height: 100%;
-  background: #625787  url(../img/bg-body.png) no-repeat bottom center; 
+  background: #443D60 url(../img/bg-body.png) no-repeat 50% center; 
   padding-bottom: 60px;
 }
 
@@ -357,9 +357,9 @@ h4 {
 }
 
 #products .well .btn-info {
-  border: 1px solid #FFF;
+  border: 1px solid #7F769D;
   color: #fff;  
-  background-color: #625787;
+  background-color: #443D60;
   text-decoration: none;
   padding:10px 18px;
   font-size: 1.1em;
@@ -367,7 +367,6 @@ h4 {
 }
 
 #products .well .btn-info:hover {
-  border: 1px solid #625787;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -516,7 +515,7 @@ a.glyphicon-play-circle:hover {
 
 /*------Product tool tips -------*/
 span.tooltips {
-  color: rgba(253,253,253,.5);
+  color: rgba(253,253,253,.8);
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
@@ -526,7 +525,7 @@ span.tooltips {
   padding: 4px 15px;
   font-size: 14px;
   text-align: center;
-  background: #7F769D;
+  background: #E54E68;
   border-radius: 4px;
   text-shadow: none;
   box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
@@ -539,7 +538,7 @@ span.tooltips:after {
   height: 0;
   border-width: 10px;
   border-style: solid;
-  border-color: #7F769D transparent transparent transparent;
+  border-color: #E54E68 transparent transparent transparent;
   top: 26px;
   left: 50%;
   margin-left: -9px;
@@ -706,7 +705,6 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 @media (min-width: 768px)  {
   #products .our-products {
-    border-top: 1px solid #7F769D;
     border-bottom: 1px solid #7F769D;
     padding: 0;
   }
