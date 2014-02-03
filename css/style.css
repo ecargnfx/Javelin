@@ -754,7 +754,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 @media (min-width: 980px)  {
   .product img {
-    max-height: 40px;
+    height: 40px;
     width: auto !important;
   }
 }
