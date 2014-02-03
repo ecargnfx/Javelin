@@ -88,16 +88,26 @@ img.logo {
 
 .jumbotron {
   padding: 30px;
-  margin: 5% 12%;
+  margin: 5% 2%;
   font-weight: 200;
   line-height: 2.1428571435;
-  color: inherit;
   background-color: transparent;
+}
+
+.jumbotron h1 {
+  line-height: 1em !important;
+}
+
+.title-block .jumbotron {
+  margin-bottom: 4%;
 }
 
 .container .jumbotron {
   border-radius: 0px; 
 }
+
+
+
 
 .image-block {
   height: 660px;
@@ -120,11 +130,7 @@ img.logo {
 
 .title-block {
   height: 100%;
-  background: url(../img/launch-bg2.jpg) no-repeat center 45% fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #625787  url(../img/bg-body.png) no-repeat bottom center; 
   padding-bottom: 60px;
 }
 
@@ -208,7 +214,7 @@ h4 {
 
 .container h1 {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 67px;  
   line-height: 1.5;
   color: #574e76;
@@ -225,9 +231,14 @@ h4 {
   color: #574e76; 
 }
 
+.title-block h1 {
+  color: white;
+}
+
 .title-block h2 {
   font-weight: 500;
   line-height: 1;
+  color: white;
 } 
 
 /*------END TYPOGRAPHY-------*/
@@ -244,6 +255,15 @@ h4 {
   padding:5px;
   background-color:rgba(255, 254, 244, 0.4); 
   box-shadow: none;  
+}
+
+#products .well {
+  background: transparent;
+  border: none;
+}
+
+#products .well p {
+  color: #FFF;
 }
 
 .quiz .well {
@@ -336,6 +356,21 @@ h4 {
   width:300px;
 }
 
+#products .well .btn-info {
+  border: 1px solid #FFF;
+  color: #fff;  
+  background-color: #625787;
+  text-decoration: none;
+  padding:10px 18px;
+  font-size: 1.1em;
+  font-weight: inherit;
+}
+
+#products .well .btn-info:hover {
+  border: 1px solid #625787;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 /*--------END BUTTONS---------*/
 
 a.glyphicon {
@@ -386,6 +421,14 @@ a.glyphicon-play-circle:hover {
   padding-top: 15px;
 }
 
+#products .col-sm-4 {
+  border-top: 1px solid #7F769D;
+  padding-top: 30px;
+}
+
+#products {
+  padding-top: 0;
+}
 
 
 /*------END ROWS AND COLUMNS-------*/
@@ -471,6 +514,42 @@ a.glyphicon-play-circle:hover {
   color: #cbc9dd;
 }
 
+/*------Product tool tips -------*/
+span.tooltips {
+  color: rgba(253,253,253,.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  width: 100px;
+  height: 12px;
+  line-height: 12px;
+  padding: 4px 15px;
+  font-size: 14px;
+  text-align: center;
+  background: #7F769D;
+  border-radius: 4px;
+  text-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
+}
+
+span.tooltips:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #7F769D transparent transparent transparent;
+  top: 26px;
+  left: 50%;
+  margin-left: -9px;
+}
+
+center {
+  position:relative;
+  top: 40px;
+}
+
 /* iPad Portrait/Browser  iPad768 */
 
 @media only screen and (min-width: 560px) and (max-width: 1100px) {
@@ -482,6 +561,7 @@ a.glyphicon-play-circle:hover {
     font-size: 1.2em;
     line-height: .5em;
   }  
+
 }
 
 @media only screen and (min-width: 440px) and (max-width: 560px) {
@@ -523,6 +603,10 @@ a.glyphicon-play-circle:hover {
   .jumbotron {
     margin: 5% 0;
   }
+  .our-products .col-md-4 {
+    border-top: none;
+    border-bottom: none;
+  }
   .container {
     padding:50px 0;
   }  
@@ -561,7 +645,9 @@ a.glyphicon-play-circle:hover {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-/* Styles */
+  #products .col-md-4 {
+    display: none;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -617,5 +703,62 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
+
+@media (min-width: 768px)  {
+  #products .our-products {
+    border-top: 1px solid #7F769D;
+    border-bottom: 1px solid #7F769D;
+    padding: 0;
+  }
+
+  #products .col-sm-4 {
+    min-height: 320px;
+  }
+
+  #products .col-sm-4:nth-child(1) {
+    border-right: 1px solid #7F769D;
+  }
+
+  #products .col-sm-4:nth-child(3) {
+    border-left: 1px solid #7F769D;
+  }
+
+  #products .jumbotron {
+    margin: 5% 2%
+  }
+
+  #products {
+    padding-bottom: 150px;
+  }
+
+  #products .product {
+    margin-top: 20px;
+  }
+
+  #products .well p {
+    min-height: 40px;
+  }
+
+  #products .col-sm-4 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  #products .well {
+    position: relative;
+    top: 30px;
+  }
+
+}
+
+@media (min-width: 980px)  {
+  .product img {
+    max-height: 40px;
+    width: auto !important;
+  }
+}
+
+
 
 

@@ -1,0 +1,25 @@
+{
+  "name": "javelindotcom",
+  "version": "0.1.0",
+  "description": "Javelin homepage",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecargnfx/Javelin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecargnfx/Javelin/issues"
+  },
+  "homepage": "https://github.com/ecargnfx/Javelin",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-open": "~0.2.3"
+  }
+}
