@@ -203,7 +203,6 @@ iframe, object, embed {
 .rocket-2 {
   height: 70px;
   width: 70px;
-  z-index: 100;
 }
 .rocket-3 {
   height: 35px;
@@ -212,7 +211,6 @@ iframe, object, embed {
 .rocket-4 {
   height: 100px;
   width: 100px;
-  z-index: 100;
 }
 
 .rocket img {
@@ -757,7 +755,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 
   #products .jumbotron {
-    margin: 5% 2%
+    margin: 4% 2%;
   }
 
   #products {
