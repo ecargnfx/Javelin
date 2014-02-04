@@ -18,13 +18,6 @@ body {
 /*----NAVBAR-----*/
 
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0px;
-  -webkit-box-shadow:rgba(0, 0, 0, 0.0470588) 0 1px 0px, rgba(0, 0, 0, 0.14902) 0 1px 3px;
-  background-color:rgba(241, 239, 249, 0.25);
-  background-position:initial initial;
-  background-repeat:initial initial;
-  box-shadow:rgba(0, 0, 0, 0.0470588) 0 1px 0px, rgba(0, 0, 0, 0.14902) 0 1px 3px;
   position:fixed;
   width:100%;
   z-index:999;
@@ -32,11 +25,14 @@ body {
 
 img.logo {
   margin-left: 20%;
+  position: relative;
+  top: 4px;
 }
 
 .navbar-default {
+  background: #443D60;
   border: 0px;
-  border-bottom: 1px solid #6f688e;
+  border-bottom: 1px solid #7F769D;
 }
 
 .navbar-right {
@@ -45,21 +41,23 @@ img.logo {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color:#41385e;
-  font-weight: 600;
+  color:#FFF;
+  font-weight: 400;
+  padding: 20px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color:#574e74;
+  background-color: #7F769D;
+  color:#FFF;
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #665d82;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -74,6 +72,10 @@ img.logo {
 
 .navbar-brand {
   padding:10px;
+}
+
+.navbar-default .navbar-collapse {
+  background: #443D60 !important;
 }
 
 /*----END NAVBAR-----*/
@@ -130,7 +132,7 @@ img.logo {
 
 .title-block {
   height: 100%;
-  background: #443D60 url(../img/bg-body.png) no-repeat 50% center; 
+  background: #443D60 url(../img/bg-body.png) no-repeat bottom center; 
   padding-bottom: 60px;
 }
 
@@ -750,13 +752,18 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 }
 
-@media (min-width: 980px)  {
+@media (min-width: 1300px)  {
   .product img {
     height: 40px;
     width: auto !important;
   }
 }
 
+@media (max-width: 768px)  {
+  .navbar-right {
+    padding-right: 0;
+  }
+}
 
 
 
