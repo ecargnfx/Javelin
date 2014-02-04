@@ -194,7 +194,6 @@ iframe, object, embed {
   position: absolute;
   height: 50px;
   width: 50px;
-  border: 1px solid green;
 }
 
 .rocket-1 {
@@ -582,8 +581,7 @@ span.tooltips:after {
 }
 
 center {
-  position:relative;
-  top: 40px;
+  margin-top: 60px
 }
 
 /* iPad Portrait/Browser  iPad768 */
@@ -763,7 +761,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 
   #products {
-    padding-bottom: 150px;
+    padding-bottom: 90px;
   }
 
   #products .product {
@@ -801,6 +799,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
 @media (max-width: 768px)  {
   .navbar-right {
     padding-right: 0;
+  }
+
+  .our-products {
+    margin-bottom: 60px;
   }
 }
 
