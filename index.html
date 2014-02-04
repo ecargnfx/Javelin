@@ -46,7 +46,20 @@
     </div>
   </div>
 
-  <div id="products" class="container title-block">
+  <div id="products" class="container title-block" data-0="background-color:rgb(68,61,96);" data-700="background-color:rgb(56,51,70);">
+    <div class="rocket rocket-1" data-0="bottom: 70px; opacity: 0; left:20%; transform:rotate(0deg)" data-70="opacity:1; transform:rotate(10deg);" data-300="bottom: 600px; left: 30%; transform:rotate(22deg)">
+      <img src="img/rocket.svg" />
+    </div>
+    <div class="rocket rocket-2" data-0="bottom: 90px; opacity: 0; left:36%; transform:rotate(0deg)" data-90="opacity:1; transform:rotate(12deg);" data-600="bottom: 600px; left: 50%; transform:rotate(20deg)">
+      <img src="img/rocket.svg" />
+    </div>
+    <div class="rocket rocket-3" data-0="bottom: 70px; opacity: 0; left:50%; transform:rotate(0deg)" data-100="opacity:1; transform:rotate(14deg);" data-500="bottom: 600px; left: 80%; transform:rotate(28deg)">
+      <img src="img/rocket.svg" />
+    </div>
+    <div class="rocket rocket-4" data-0="bottom: 100px; opacity: 0; left:80%; transform:rotate(0deg)" data-109="opacity:1; transform:rotate(8deg);" data-700="bottom: 600px; left: 95%; transform:rotate(20deg)">
+      <img src="img/rocket.svg" />
+    </div>
+      
     <div class="jumbotron">
       <center>
         <h1>Build Something Greater</h1>
@@ -303,7 +316,10 @@
   <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>    
   <script src="js/jquery.easing.1.2.js"></script>
+  <script src="js/skrollr.min.js"></script>
   <script>
+    var s = skrollr.init();
+
     $(window).ready(function() {  
       function filterPath(string) {
         return string
