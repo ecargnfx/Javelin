@@ -804,5 +804,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
+@media only screen and ( max-height: 800px ) and ( max-width: 1100px ) {
+  #products .jumbotron {
+    margin: 2% 2%;
+  }
+}
 
 
