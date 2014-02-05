@@ -319,7 +319,12 @@
   <script src="js/jquery.easing.1.2.js"></script>
   <script src="js/skrollr.min.js"></script>
   <script>
-    var s = skrollr.init();
+    var s = skrollr.init({
+      mobileCheck: function() {
+        // hack - forces mobile version to be off
+        return false;
+      }
+    });
 
     $(window).ready(function() {  
       function filterPath(string) {
