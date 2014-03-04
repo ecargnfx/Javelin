@@ -11,7 +11,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css"> 
-  <link href="jackbox/css/jackbox.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="css/ilightbox.css"/>
 
   <!--[if lt IE 9]>
     <link href="jackbox/css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
@@ -61,8 +61,15 @@
           <h2>Test your startup idea without wasting time or money</h2>
         
         <a class="btn btn-default" href="#">FREE Download for a Tweet</a>
-        <a class="glyphicon glyphicon-play-circle jackbox" data-group="youtube" data-title="Experiment Board Tutorial" data-description="#description_1" href="http://www.youtube.com/watch?v=ibCeunrPOZY">
-        </a>
+        <a class="glyphicon glyphicon-play-circle ilightbox" 
+          id="ilightbox" 
+          href="http://www.youtube.com/embed/ibCeunrPOZY?autohide=1&border=0&egm=0&showinfo=0&showsearch=0"
+          data-tytpe="iframe"
+          data-options="
+            icon: 'video',
+            width: 638,
+            height: 360
+          "></a>
         <br/><p><strong>Play Tutorial</strong></p>
         
       <center>  
@@ -233,54 +240,21 @@
 
   <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="jackbox/js/jackbox-packed.min.js"></script>
-
-  <script type="text/javascript">
-  
-    jQuery(document).ready(function() {
-      
-      /* ******************* */
-      /* ALL JACKBOX OPTIONS */
-      /* ******************* */
-      
-      /*
-      jQuery(".jackbox[data-group]").jackBox("init", {
-      
-        deepLinking: true,              // choose to use the deep-linking feature ("true" will enhance social sharing!) true/false
-        showInfoByDefault: false,       // show item info automatically when content loads, true/false
-        preloadGraphics: true,          // preload the jackbox graphics for a faster jackbox
-        fullscreenScalesContent: true,  // Choose to always scale content up in fullscreen, true/false
-        defaultShareImage: "1.jpg",     // the default image to share for non-image items, only relevent to Pinterest
-        
-        autoPlayVideo: false,           // video autoplay default, this can also be set per video in the data-attributes, true/false
-        flashVideoFirst: false,         // choose which technology has first priority for video, HTML5 or Flash, true/false
-        defaultVideoWidth: 960,         // the default video width, can also be set per video in the data-attributes
-        defaultVideoHeight: 540,        // the default video height, can also be set per video in the data-attributes
-        
-        useThumbs: true,                // choose to use thumbnails, true/false
-        useThumbTooltips: true,         // choose to use thumbnail tooltips, true/false
-        thumbsStartHidden: false,       // choose to initially hide the thumbnail strip, true/false
-        thumbnailWidth: 75,             // the default thumb width, can also be set per video in the data-attributes
-        thumbnailHeight: 50,            // the default thumb height, can also be set per video in the data-attributes
-        showPageScrollbar: false,       // if you don't like the "page jump" when the scrollbar disappears, set this to "true"
-        useKeyboardControls: true       // The left and right keyboard arrows will cycle through the items.  up/down will toggle thumbs
-        
-      });
-      */
-      
-      /* ******************** */
-      /* MINIMAL JACKBOX CALL */
-      /* ******************** */
-      jQuery(".jackbox[data-group]").jackBox("init", {deepLinking: true});
-
-
-    });
-  
-  </script> 
-
   <script src="js/jquery.easing.1.2.js"></script>
+  <script src="js/jquery.requestAnimationFrame.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script src="js/ilightbox.packed.js"></script>
   <script>
     $(window).ready(function() {  
+      $('#ilightbox').iLightBox({
+        social: {
+          facebook: true,
+          twitter: true,
+          googleplus: true,
+        }
+      });
+
+
       function filterPath(string) {
         return string
         .replace(/^\//,'')

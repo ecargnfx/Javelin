@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           livereload: true
         }
       }
-    }
+    },
   });
 
   // Load plugins
